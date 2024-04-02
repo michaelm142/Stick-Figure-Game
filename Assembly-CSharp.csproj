@@ -59,18 +59,21 @@
     <Compile Include="Assets\Scripts\SceneDirector.cs" />
     <Compile Include="Assets\Scripts\LineRendererAnimator.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\UI\MessageManager.cs" />
     <Compile Include="Assets\Scripts\UI\ToolTip.cs" />
     <Compile Include="Assets\Scripts\Interaction System\ActiveInteraction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\TestActiveInteraction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\InteractionSystem.cs" />
     <Compile Include="Assets\Scripts\UI\UIMapManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\FlavorTextBox.cs" />
+    <Compile Include="Assets\Scripts\Lifetime.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\UI\StatTableUIController.cs" />
     <Compile Include="Assets\Scripts\StickFigureController.cs" />
+    <Compile Include="Assets\Scripts\UI\Inventory\InventoryItemToolTip.cs" />
     <Compile Include="Assets\Scripts\UI\MapIconAnimationControl.cs" />
-    <Compile Include="Assets\Scripts\UI\MessageManager.cs" />
-    <Compile Include="Assets\Scripts\Lifetime.cs" />
+    <Compile Include="Assets\Scripts\Party.cs" />
+    <Compile Include="Assets\Scripts\CombatDirector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

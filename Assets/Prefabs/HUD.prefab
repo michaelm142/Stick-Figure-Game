@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6035996274343471822}
   - component: {fileID: 6758566527775573448}
-  - component: {fileID: 2633247430258013779}
+  - component: {fileID: 5096794483567886235}
   m_Layer: 5
   m_Name: Location (1)
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2633247430258013779
+--- !u!114 &5096794483567886235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b33d94d7c7053344b4a618d3b0f5c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 
+  targetScene: TestInterior
 --- !u!1 &713508931175563347
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b33d94d7c7053344b4a618d3b0f5c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Red
+  targetScene: TestInterior
 --- !u!1 &2368883015652963333
 GameObject:
   m_ObjectHideFlags: 0

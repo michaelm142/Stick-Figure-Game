@@ -7,17 +7,16 @@ using SFG;
 
 public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject toolTipContainer;
-
-    private GameObject container;
+    protected static GameObject container;
 
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
         container.SetActive(true);
+        container.transform.position = Input.mousePosition;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public virtual void OnPointerExit(PointerEventData eventData)
     {
         container.SetActive(false);
     }
@@ -25,14 +24,12 @@ public class ToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // Start is called before the first frame update
     void Start()
     {
-        container = Instantiate(toolTipContainer, transform.parent);
-        container.transform.position = transform.position;
-        container.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (container == null)
+        {
+            GameObject toolTipContainer = Resources.Load<GameObject>("UI/UI_Stat_Container");
+            container = Instantiate(toolTipContainer, FindObjectOfType<Canvas>().transform);
+            container.transform.position = transform.position;
+            container.SetActive(false);
+        }
     }
 }
