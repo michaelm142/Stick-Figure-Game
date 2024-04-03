@@ -9,24 +9,75 @@ public class CombatDirector : MonoBehaviour
 {
     static string layoutXml;
 
+    IDecisionMaker playerDescisionMaker;
+    // IDecisionMaker aiDecisionMaker;
+
+    public bool isPlayerTurn;
+
+    private int characterIndex;
+
+    private Party playerParty;
+    private Party opponentParty;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerDescisionMaker = FindObjectOfType<PlayerDecisionMaker>();
+
         BeginCombat();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isPlayerTurn)
+        {
+            foreach (string decision in playerDescisionMaker.MakeDecision())
+            {
+                if (string.IsNullOrEmpty(decision))
+                    break;
 
+                ProcessPlayerDecision(decision);
+            }
+            
+            ControlCamera();
+        }
+
+    }
+
+    void ControlCamera()
+    {
+        if (characterIndex >= playerParty.members.Count)
+            characterIndex = 0;
+
+        GameObject target = playerParty.members[characterIndex];
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.transform.position + Vector3.up * 2.0f + Vector3.right * 2.0f + Vector3.back * 2.0f, Time.deltaTime);
+    }
+
+    void ProcessPlayerDecision(string decision)
+    {
+        if (!string.IsNullOrEmpty(decision))
+        {
+            switch (decision)
+            {
+                case "attack":
+                    Debug.Log("Player attacked");
+                    characterIndex++;
+                    break;
+                case "defend":
+                    Debug.Log("Player defended");
+                    characterIndex++;
+                    break;
+            }
+        }
     }
 
     void BeginCombat()
     {
         List<Party> parties = FindObjectsOfType<Party>().ToList();
 
-        Party playerParty = parties.Find(p => p.isPlayer);
-        Party opponentParty = parties.Find(p => p != playerParty);
+        playerParty = parties.Find(p => p.isPlayer);
+        opponentParty = parties.Find(p => p != playerParty);
 
         List<GameObject> combatSquares = GameObject.FindGameObjectsWithTag("CombatSquare").ToList();
 
@@ -55,7 +106,7 @@ public class CombatDirector : MonoBehaviour
     {
         if (string.IsNullOrEmpty(layoutXml))
         {
-            TextAsset xml = Resources.Load<TextAsset>("GridLayouts");
+            TextAsset xml = Resources.Load<TextAsset>("Xml\\GridLayouts");
             layoutXml = xml.text;
         }
         XmlDocument doc = new XmlDocument();

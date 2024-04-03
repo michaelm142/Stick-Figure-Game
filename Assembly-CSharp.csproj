@@ -76,6 +76,8 @@
     <Compile Include="Assets\Scripts\StickFigureController.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InventoryItemToolTip.cs" />
     <Compile Include="Assets\Scripts\UI\MapIconAnimationControl.cs" />
+    <Compile Include="Assets\Scripts\IDecisionMaker.cs" />
+    <Compile Include="Assets\Scripts\PlayerDecisionMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -84,7 +86,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Resources\GridLayouts.xml" />
+    <None Include="Assets\Resources\Xml\GridLayouts.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

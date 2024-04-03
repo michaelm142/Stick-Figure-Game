@@ -7,7 +7,12 @@ public class CombatCharacter : MonoBehaviour
 {
     public Character character { get; private set; }
 
-    public float Health;
+    public float Health
+    {
+        get { return character.Health; }
+
+        set { character.Health = value; }
+    }
 
     public CombatCharacter()
     {
