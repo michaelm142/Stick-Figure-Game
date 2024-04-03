@@ -1,0 +1,41 @@
+<root>
+	<Layout n="1">
+		<Actor x="2" y="1"/>
+	</Layout>
+
+	<Layout n="2">
+		<Actor x="1" y="1"/>
+		<Actor x="3" y="1"/>
+	</Layout>
+
+	<Layout n="3">
+		<Actor x="1" y="1"/>
+		<Actor x="3" y="1"/>
+		<Actor x="2" y="2"/>
+	</Layout>
+	
+	<Layout n="4">
+		<Actor x="1" y="1"/>
+		<Actor x="3" y="1"/>
+		<Actor x="1" y="2"/>
+		<Actor x="3" y="2"/>
+	</Layout>
+	
+	<Layout n="5">
+		<Actor x="1" y="1"/>
+		<Actor x="2" y="1"/>
+		<Actor x="3" y="1"/>
+		<Actor x="1" y="2"/>
+		<Actor x="3" y="2"/>
+	</Layout>
+	
+	<Layout n="6">
+		<Actor x="1" y="1"/>
+		<Actor x="2" y="1"/>
+		<Actor x="3" y="1"/>
+		<Actor x="1" y="2"/>
+		<Actor x="2" y="2"/>
+		<Actor x="3" y="2"/>
+	</Layout>
+
+</root>

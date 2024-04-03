@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class CombatDirector : MonoBehaviour
 {
+    static string layoutXml;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,7 @@ public class CombatDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void BeginCombat()
@@ -37,22 +40,42 @@ public class CombatDirector : MonoBehaviour
     void SpawnCharacters(Party party, Transform combatSquare)
     {
         List<GameObject> newMembers = new List<GameObject>();
-        for (int y = 1, partyIndex = 0; y < 3 && partyIndex < party.members.Count; y++)
+        string[] layout = LoadLayout(party.members.Count);
+        for (int i = 0; i < party.members.Count; i++)
         {
-            for (int x = 1; x < 4; x++)
-            {
-                if (partyIndex >= party.members.Count)
-                    break;
-
-                Transform space = combatSquare.transform.Find(y.ToString() + "x" + x.ToString());
-                GameObject character = Instantiate(party.members[partyIndex]);
-                character.transform.position = space.position;
-                newMembers.Add(character);
-                partyIndex++;
-            }
+            Transform space = combatSquare.transform.Find(layout[i]);
+            GameObject character = Instantiate(party.members[i]);
+            character.transform.position = space.position;
+            newMembers.Add(character);
         }
         party.members = newMembers;
     }
 
+    private string[] LoadLayout(int n)
+    {
+        if (string.IsNullOrEmpty(layoutXml))
+        {
+            TextAsset xml = Resources.Load<TextAsset>("GridLayouts");
+            layoutXml = xml.text;
+        }
+        XmlDocument doc = new XmlDocument();
+        doc.LoadXml(layoutXml);
+
+        XmlElement root = doc.FirstChild as XmlElement;
+        List<XmlNode> layouts = root.SelectNodes("Layout").ConvertTo<List<XmlNode>>();
+        XmlNode layoutNode = layouts.Find(l => l.Attributes["n"].Value == n.ToString());
+        string[] outval = new string[layoutNode.ChildNodes.Count];
+
+        for (int i = 0; i < outval.Length; i++)
+        {
+            XmlNode actor = layoutNode.ChildNodes[i];
+            string x = actor.Attributes["x"].Value;
+            string y = actor.Attributes["y"].Value;
+
+            outval[i] = y + "x" + x;
+        }
+
+        return outval;
+    }
 
 }
