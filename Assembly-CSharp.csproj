@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SceneDirector.cs" />
+    <Compile Include="Assets\Scripts\Combat\IDecisionMaker.cs" />
     <Compile Include="Assets\Scripts\LineRendererAnimator.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\UI\MessageManager.cs" />
@@ -71,13 +72,12 @@
     <Compile Include="Assets\Scripts\UI\StatTableUIController.cs" />
     <Compile Include="Assets\Scripts\Party.cs" />
     <Compile Include="Assets\Scripts\UI\PartyHealthUIControl.cs" />
-    <Compile Include="Assets\Scripts\CombatDirector.cs" />
-    <Compile Include="Assets\Scripts\CombatCharacter.cs" />
+    <Compile Include="Assets\Scripts\Combat\CombatDirector.cs" />
+    <Compile Include="Assets\Scripts\Combat\CombatCharacter.cs" />
+    <Compile Include="Assets\Scripts\Combat\PlayerDecisionMaker.cs" />
     <Compile Include="Assets\Scripts\StickFigureController.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InventoryItemToolTip.cs" />
     <Compile Include="Assets\Scripts\UI\MapIconAnimationControl.cs" />
-    <Compile Include="Assets\Scripts\IDecisionMaker.cs" />
-    <Compile Include="Assets\Scripts\PlayerDecisionMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
