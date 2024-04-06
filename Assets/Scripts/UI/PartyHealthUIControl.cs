@@ -42,6 +42,11 @@ public class PartyHealthUIControl : MonoBehaviour
         for (int i = 0; i < playerParty.members.Count; i++)
         {
             float health = playerParty.members[i].GetComponent<CombatCharacter>().Health;
+            if (health <= 0.0f)
+            {
+                healthPlates[i].SetActive(false);
+                continue;
+            }
             float maxHealth = playerParty.members[i].GetComponent<CombatCharacter>().character.statTable.MaxHealth;
             float x = health / maxHealth;
             Color c = healthGradient.Evaluate(x);

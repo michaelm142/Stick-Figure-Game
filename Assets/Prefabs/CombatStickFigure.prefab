@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 5303071494339068237}
   - component: {fileID: 5303071494339068242}
   - component: {fileID: 5303071494339068243}
-  - component: {fileID: 5303071494339068254}
   - component: {fileID: 5303071494339068255}
   m_Layer: 0
   m_Name: CombatStickFigure
@@ -65,7 +64,7 @@ Transform:
   m_Children:
   - {fileID: 5303071493250688726}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5303071494339068242
 SpriteRenderer:
@@ -139,20 +138,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &5303071494339068254
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5303071494339068240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.53
-  m_Height: 5.1199994
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5303071494339068255
 MonoBehaviour:
   m_ObjectHideFlags: 0
