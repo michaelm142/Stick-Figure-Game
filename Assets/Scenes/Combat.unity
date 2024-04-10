@@ -468,7 +468,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 334094504}
         m_TargetAssemblyTypeName: CombatDirector, Assembly-CSharp
-        m_MethodName: ReturnToGamePlay
+        m_MethodName: ReturnToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -816,9 +816,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerTurn: 1
+  combatEnded: 0
   CameraMoveSpeed: 1
   CameraRotatSpeed: 5
   victoryScreen: {fileID: 522423327}
+  defeatScreen: {fileID: 1741592226}
   targetHealthComponent: {fileID: 5932231846387667797, guid: 5ea4173074134094e9ae23b3e2d259ba, type: 3}
   targetHealthVerticalOffset: 200
 --- !u!1 &353589233
@@ -3152,7 +3154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1741592226
 RectTransform:
   m_ObjectHideFlags: 0
