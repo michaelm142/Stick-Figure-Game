@@ -16,6 +16,7 @@ public class CombatDirector : MonoBehaviour
     IDecisionMaker aiDecisionMaker;
 
     public bool isPlayerTurn;
+    public bool combatEnded;
 
     private int characterIndex;
 
@@ -26,6 +27,7 @@ public class CombatDirector : MonoBehaviour
     public float CameraRotatSpeed = 5.0f;
 
     public Transform victoryScreen;
+    public Transform defeatScreen;
 
     public GameObject targetHealthComponent;
     public float targetHealthVerticalOffset = 200.0f;
@@ -106,40 +108,43 @@ public class CombatDirector : MonoBehaviour
     void Update()
     {
         ShowTargetHealth();
-        if (isPlayerTurn)
+        if (!combatEnded)
         {
-            foreach (string decision in playerDescisionMaker.MakeDecision())
+            if (isPlayerTurn)
             {
-                if (string.IsNullOrEmpty(decision))
-                    break;
+                foreach (string decision in playerDescisionMaker.MakeDecision())
+                {
+                    if (string.IsNullOrEmpty(decision))
+                        break;
 
-                ProcessPlayerDecision(decision);
+                    ProcessPlayerDecision(decision);
+                }
             }
-        }
-        else
-        {
-            foreach (string decision in aiDecisionMaker.MakeDecision())
+            else
             {
-                if (string.IsNullOrEmpty(decision))
-                    break;
+                foreach (string decision in aiDecisionMaker.MakeDecision())
+                {
+                    if (string.IsNullOrEmpty(decision))
+                        break;
 
-                ProcessAiDecision(decision);
+                    ProcessAiDecision(decision);
+                }
             }
-        }
 
-        if (isPlayerTurn && characterIndex >= playerParty.members.Count)
-        {
-            characterIndex = 0;
-            isPlayerTurn = false;
-        }
+            if (isPlayerTurn && characterIndex >= playerParty.members.Count)
+            {
+                characterIndex = 0;
+                isPlayerTurn = false;
+            }
 
-        if (!isPlayerTurn && characterIndex >= opponentParty.members.Count)
-        {
-            characterIndex = 0;
-            isPlayerTurn = true;
-        }
+            if (!isPlayerTurn && characterIndex >= opponentParty.members.Count)
+            {
+                characterIndex = 0;
+                isPlayerTurn = true;
+            }
 
-        DetectEndCondition();
+            DetectEndCondition();
+        }
     }
 
     private void DetectEndCondition()
@@ -163,7 +168,15 @@ public class CombatDirector : MonoBehaviour
         }
 
         if (opponentParty.members.Count == 0)
+        {
             victoryScreen.gameObject.SetActive(true);
+            combatEnded = true;
+        }
+        if (playerParty.members.Count == 0)
+        {
+            defeatScreen.gameObject.SetActive(true);
+            combatEnded = true;
+        }
     }
 
     private void FixedUpdate()
@@ -178,7 +191,7 @@ public class CombatDirector : MonoBehaviour
     /// </summary>
     void ShowTargetHealth()
     {
-        if (playerDescisionMaker.target == null)
+        if (combatEnded)
         {
             targetHealthComponent.SetActive(false);
             return;
@@ -267,5 +280,10 @@ public class CombatDirector : MonoBehaviour
     public void ReturnToGamePlay()
     {
         SceneManager.LoadScene("TestExteriorEnvironment");
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
