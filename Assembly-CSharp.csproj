@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\UI\Inventory\InventoryItemToolTip.cs" />
     <Compile Include="Assets\Scripts\UI\MapIconAnimationControl.cs" />
     <Compile Include="Assets\Scripts\Combat\AiDecisionMaker.cs" />
+    <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

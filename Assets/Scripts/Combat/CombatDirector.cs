@@ -1,7 +1,9 @@
+using SFG;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -237,7 +239,17 @@ public class CombatDirector : MonoBehaviour
     {
         opponentParty.members[characterIndex].GetComponent<Animator>().SetTrigger("Attack_Melee_Slice");
         Debug.Log("Ai attacked");
-        opponentParty.members[characterIndex].GetComponent<CombatCharacter>().character.Attack(defender);
+        SFG.AttackState state;
+        float damage = opponentParty.members[characterIndex].GetComponent<CombatCharacter>().character.Attack(defender, out state);
+        switch (state)
+        {
+            case AttackState.Hit:
+                MessageManager.ShowMessage("Hit -" + damage.ToString(), 0.5f);
+                break;
+            case AttackState.Miss:
+                MessageManager.ShowMessage("Miss", 0.5f);
+                break;
+        }
         characterIndex++;
     }
 
@@ -263,7 +275,17 @@ public class CombatDirector : MonoBehaviour
         playerParty.members[characterIndex].GetComponent<Animator>().SetTrigger("Attack_Melee_Slice");
         Debug.Log("Player attacked");
 
-        playerParty.members[characterIndex].GetComponent<CombatCharacter>().character.Attack(defender);
+        AttackState state;
+        float damage = playerParty.members[characterIndex].GetComponent<CombatCharacter>().character.Attack(defender, out state); 
+        switch (state)
+        {
+            case AttackState.Hit:
+                MessageManager.ShowMessage("Hit -" + damage.ToString(), 0.5f);
+                break;
+            case AttackState.Miss:
+                MessageManager.ShowMessage("Miss", 0.5f);
+                break;
+        }
     }
 
     /// <summary>
