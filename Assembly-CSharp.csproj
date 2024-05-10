@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\LineRendererAnimator.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\UI\MessageManager.cs" />
+    <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\ToolTip.cs" />
     <Compile Include="Assets\Scripts\Interaction System\ActiveInteraction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\TestActiveInteraction.cs" />
@@ -76,10 +77,10 @@
     <Compile Include="Assets\Scripts\Combat\CombatCharacter.cs" />
     <Compile Include="Assets\Scripts\Combat\PlayerDecisionMaker.cs" />
     <Compile Include="Assets\Scripts\StickFigureController.cs" />
+    <Compile Include="Assets\Scripts\DoorTeleport.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InventoryItemToolTip.cs" />
     <Compile Include="Assets\Scripts\UI\MapIconAnimationControl.cs" />
     <Compile Include="Assets\Scripts\Combat\AiDecisionMaker.cs" />
-    <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

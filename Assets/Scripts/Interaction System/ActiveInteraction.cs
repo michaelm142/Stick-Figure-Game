@@ -25,7 +25,10 @@ public class ActiveInteraction : MonoBehaviour
         {
             BroadcastMessage("ActiveInteract", SendMessageOptions.DontRequireReceiver);
             if (OnInteract != null)
+            {
+                Debug.Log("Object " + name + " fired active interaction");
                 OnInteract.Invoke();
+            }
         }
 
         interactPrev = Input.GetAxis("Interact");
