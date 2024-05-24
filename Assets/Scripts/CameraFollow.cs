@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
 
     public float ZDistance = 10.0f;
     public float CameraRotationSpeed = 10.0f;
+    public float dampening = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,13 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 L = ((target.position - target.forward * ZDistance) - transform.position).normalized;
-        //float w = 1.0f - Mathf.Abs(Vector3.Dot(L, transform.forward));
-        transform.position += L * Time.deltaTime;// * w;
+        Vector3 targetPosition = target.position - target.forward * ZDistance;
+        Vector3 L = (targetPosition - transform.position);
+        float damp = (1.0f * Mathf.Clamp01(dampening));
+        L = Vector3.ClampMagnitude(L, Vector3.Distance(target.position, transform.position));
+        transform.position += L * damp;
         transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, Time.deltaTime * CameraRotationSpeed);
     }
 

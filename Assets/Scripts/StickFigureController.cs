@@ -6,6 +6,7 @@ using UnityEngine;
 public class StickFigureController : MonoBehaviour
 {
     public float walkSpeed = 10.0f;
+    public float SprintMultiplyer = 1.5f;
     public float maxSpeed = 30.0f;
 
     private Animator animator;
@@ -27,9 +28,10 @@ public class StickFigureController : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
+        float sprint = Input.GetAxis("Sprint");
         float speed = Mathf.Abs(horizontal);
 
-        controller.Move(transform.right * walkSpeed * horizontal * Time.deltaTime);
+        controller.Move(transform.right * walkSpeed * (horizontal + horizontal * SprintMultiplyer * sprint) * Time.deltaTime);
         // transform.position += horizontal * Vector3.right * walkSpeed * Time.deltaTime;
         //isOnGround = Physics.Raycast(transform.position, Vector3.down, 1.0f);
         //if (isOnGround)
