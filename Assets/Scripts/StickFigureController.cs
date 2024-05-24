@@ -29,7 +29,7 @@ public class StickFigureController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float speed = Mathf.Abs(horizontal);
 
-        controller.Move(Vector3.right * walkSpeed * horizontal * Time.deltaTime);
+        controller.Move(transform.right * walkSpeed * horizontal * Time.deltaTime);
         // transform.position += horizontal * Vector3.right * walkSpeed * Time.deltaTime;
         //isOnGround = Physics.Raycast(transform.position, Vector3.down, 1.0f);
         //if (isOnGround)
