@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Red.unity
     guid: 4bddb95368bda014e9b7d8ffb2c397d2
+  - enabled: 1
+    path: Assets/Scenes/Warf_RuinedYacht_Interior.unity
+    guid: ec22bb8704e2bfd478314cfeb7f7fb31
+  - enabled: 1
+    path: Assets/Scenes/Warf.unity
+    guid: 6d3e8384005c53e4a84f8858767d9acc
   m_configObjects: {}
