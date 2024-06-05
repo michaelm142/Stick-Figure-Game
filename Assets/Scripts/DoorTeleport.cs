@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,8 +13,24 @@ public class DoorTeleport : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (location == null)
-            Gizmos.DrawWireCube(transform.position + transform.forward * length, Vector3.up * 2.0f + Vector3.forward + Vector3.right);
+        var box = GetComponent<BoxCollider>();
+        Color c = Color.white;
+        if (Selection.objects.Contains(gameObject))
+            c = Color.green;
+        Vector3 location = transform.localToWorldMatrix.MultiplyPoint(box.center);
+        Vector3 size = transform.localToWorldMatrix.MultiplyVector(box.size);
+        Gizmos.color = c;
+        Gizmos.DrawWireCube(location, size);
+
+        if (this.location != null)
+        {
+            Gizmos.DrawSphere(this.location.position, 0.1f);
+            Gizmos.DrawLine(location, this.location.position);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(this.location.position, this.location.position + this.location.right * 0.2f);
+        }
+        Gizmos.color = Color.white;
     }
 
     public void TeleportPlayer()
