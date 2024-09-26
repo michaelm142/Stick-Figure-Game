@@ -14,7 +14,7 @@ public class DoorTeleport : MonoBehaviour
     private void OnDrawGizmos()
     {
         var box = GetComponent<BoxCollider>();
-        Color c = Color.white;
+        Color c = Color.blue;
         if (Selection.objects.Contains(gameObject))
             c = Color.green;
         Vector3 location = transform.localToWorldMatrix.MultiplyPoint(box.center);
@@ -29,6 +29,9 @@ public class DoorTeleport : MonoBehaviour
 
             Gizmos.color = Color.red;
             Gizmos.DrawLine(this.location.position, this.location.position + this.location.right * 0.2f);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(this.location.position, this.location.position + this.location.forward * 0.2f);
+            Gizmos.DrawIcon(this.location.position + this.location.forward, "Camera");
         }
         Gizmos.color = Color.white;
     }

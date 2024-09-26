@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-09-20T02:29:22.613Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="H-0dlzHM6fgSWaOuu5-j" version="22.0.0" type="device" pages="2">
+<mxfile host="Electron" modified="2024-09-20T02:47:05.083Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.0 Chrome/114.0.5735.289 Electron/25.8.3 Safari/537.36" etag="fnYkDQbeEf4bOiVhcgVG" version="22.0.0" type="device" pages="2">
   <diagram name="BRC_Level1" id="j0BAMzw7HvuAJi5XUVbx">
     <mxGraphModel dx="1687" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -16,32 +16,42 @@
         <mxCell id="RvOwUheop6NtoTUly7eJ-3" value="Rock ramp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="50" y="410" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uMQ_sK52v3GIqnVakgB0-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="RvOwUheop6NtoTUly7eJ-4" target="RvOwUheop6NtoTUly7eJ-5">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="BW7fkP8pg9GB_xVi53aL-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="RvOwUheop6NtoTUly7eJ-4" target="BW7fkP8pg9GB_xVi53aL-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="440" />
+              <mxPoint x="550" y="440" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="RvOwUheop6NtoTUly7eJ-4" value="Acid River Bridge 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="210" y="410" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uMQ_sK52v3GIqnVakgB0-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="RvOwUheop6NtoTUly7eJ-5" target="RvOwUheop6NtoTUly7eJ-6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RvOwUheop6NtoTUly7eJ-5" value="Acid River Bridge 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="410" width="120" height="60" as="geometry" />
+          <mxGeometry x="210" y="410" width="290" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RvOwUheop6NtoTUly7eJ-6" value="Black Rock Cave 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="410" width="120" height="60" as="geometry" />
+          <mxGeometry x="740" y="410" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uMQ_sK52v3GIqnVakgB0-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="uMQ_sK52v3GIqnVakgB0-1" target="RvOwUheop6NtoTUly7eJ-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uMQ_sK52v3GIqnVakgB0-1" value="Acid River Shore 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="uMQ_sK52v3GIqnVakgB0-1" value="Egypt Gate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="160" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uMQ_sK52v3GIqnVakgB0-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="uMQ_sK52v3GIqnVakgB0-2" target="RvOwUheop6NtoTUly7eJ-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uMQ_sK52v3GIqnVakgB0-2" value="Black Rock Cave 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="410" width="120" height="60" as="geometry" />
+          <mxGeometry x="1030" y="355" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="BW7fkP8pg9GB_xVi53aL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="BW7fkP8pg9GB_xVi53aL-2" target="RvOwUheop6NtoTUly7eJ-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="440" />
+              <mxPoint x="690" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BW7fkP8pg9GB_xVi53aL-2" value="Acid river shore 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="410" width="120" height="460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -51,23 +61,22 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-1" target="tfsyMsQNIkOCxWUdeIf7-2">
+        <mxCell id="Lxo0zYJKjOeSbL0w6K2W-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-1" target="tfsyMsQNIkOCxWUdeIf7-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tfsyMsQNIkOCxWUdeIf7-1" value="Rock ramp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="420" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-2" target="tfsyMsQNIkOCxWUdeIf7-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-2" value="Black Rock Cliff 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="540" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="tfsyMsQNIkOCxWUdeIf7-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-3" target="tfsyMsQNIkOCxWUdeIf7-4">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="680" />
+              <mxPoint x="200" y="680" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-3" value="Black Rock Cliff 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="650" width="120" height="60" as="geometry" />
+        <mxCell id="tfsyMsQNIkOCxWUdeIf7-3" value="Black Rock Cliff 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="510" width="120" height="520" as="geometry" />
         </mxCell>
         <mxCell id="tfsyMsQNIkOCxWUdeIf7-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-4" target="tfsyMsQNIkOCxWUdeIf7-5">
           <mxGeometry relative="1" as="geometry" />
@@ -75,14 +84,14 @@
         <mxCell id="tfsyMsQNIkOCxWUdeIf7-4" value="Acid Upper Bridge" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="650" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-5" target="tfsyMsQNIkOCxWUdeIf7-6">
+        <mxCell id="Lxo0zYJKjOeSbL0w6K2W-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tfsyMsQNIkOCxWUdeIf7-5" target="Lxo0zYJKjOeSbL0w6K2W-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-5" value="Black Rock Cliff 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="650" width="120" height="60" as="geometry" />
+        <mxCell id="tfsyMsQNIkOCxWUdeIf7-5" value="Black Rock Cliff 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="445" width="120" height="470" as="geometry" />
         </mxCell>
-        <mxCell id="tfsyMsQNIkOCxWUdeIf7-6" value="Black Rock Cliff 4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="540" width="120" height="60" as="geometry" />
+        <mxCell id="Lxo0zYJKjOeSbL0w6K2W-2" value="1-288 North Tunnel Entrance" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="940" width="120" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
