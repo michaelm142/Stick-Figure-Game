@@ -10,9 +10,17 @@ public class CameraFollow : MonoBehaviour
     public float CameraRotationSpeed = 10.0f;
     public float dampening = 0.2f;
 
+    public bool TargetPlayerByDefault = true;
+
     // Start is called before the first frame update
     void Start()
     {
+        // target the player if no target is set
+        if (target == null && TargetPlayerByDefault)
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            target = player.transform;
+        }
         Reposition();
     }
 
